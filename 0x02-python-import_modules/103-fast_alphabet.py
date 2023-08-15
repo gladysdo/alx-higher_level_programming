@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 import string
-alphabet = string.ascii_uppercase
-print(alphabet)
+print(*(getattr(string, 'ascii_uppercase')), sep='')
