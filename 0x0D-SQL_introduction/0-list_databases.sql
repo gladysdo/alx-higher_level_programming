@@ -1,3 +1,2 @@
-#!/bin/bash
---list all database from SQL server
-Show database;
+--lists all databases of your MySQL server.
+SHOW DATABASE;
