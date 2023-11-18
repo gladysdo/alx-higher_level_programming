@@ -19,6 +19,7 @@ if __name__ == "__main__":
             db=db_name)
     """ Create cursor of the object """
     cursor = database.cursor()
-    cursor.execute('SELECT id, name FROM states WHERE name  = "{0}" ORDER BY id'.format(argv[4]))
+    cursor.execute('SELECT id, name FROM states WHERE name = "{0}" '
+                   'ORDER BY id'.format(argv[4]))
     for row in cursor.fetchall():
         print(row)
