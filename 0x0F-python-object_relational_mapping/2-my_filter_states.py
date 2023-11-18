@@ -19,8 +19,8 @@ if __name__ == "__main__":
             db=db_name)
     """ Create cursor of the object """
     cursor = database.cursor()
-    cursor.execute('SELECT id, name FROM states where name LIKE %s
-            ORDER BY id ASC'.format(search))
+    cursor.execute('SELECT id, name FROM states WHERE name  =''
+            ORDER BY id ASC')
     for row in cursor.fetchall():
         if row[1] == search:
             print(row)
