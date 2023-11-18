@@ -15,13 +15,10 @@ if __name__ == "__main__":
             user=db_user,
             passwd=db_passwd,
             db=db_name)
-    
     """ Create cursor object """
     cursor = database.cursor()
-    
     """ Select only states starting with N """
     cursor.execute('SELECT id, name FROM states ORDER BY id ASC')
-
     """ Print the results """
     for row in cursor.fetchall():
         if row[1][0] == 'N':
